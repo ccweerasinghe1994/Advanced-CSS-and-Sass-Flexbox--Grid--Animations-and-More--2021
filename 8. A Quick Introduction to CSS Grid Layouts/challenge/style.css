@@ -1,0 +1,70 @@
+.container {
+  background-color: #eee;
+  width: 1300px;
+  display: -ms-grid;
+  display: grid;
+  gap: 20px;
+  -ms-grid-columns: (1fr)[3] 10%;
+      grid-template-columns: repeat(3, 1fr) 10%;
+  -ms-grid-rows: (1fr)[4];
+      grid-template-rows: repeat(4, 1fr);
+      grid-template-areas: ". head head ." "box-1 box-2 box-3 side" "main main main side" "footer footer footer footer";
+}
+
+.container > * {
+  padding: 2rem;
+}
+
+.container .header {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 2;
+  grid-area: head;
+  background-color: blue;
+}
+
+.container .small-box--1 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: box-1;
+  background-color: red;
+}
+
+.container .small-box--2 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: box-2;
+  background-color: red;
+}
+
+.container .small-box--3 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 3;
+  grid-area: box-3;
+  background-color: red;
+}
+
+.container .side-bar {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 4;
+  grid-area: side;
+  background-color: aquamarine;
+}
+
+.container .footer {
+  background-color: aqua;
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 4;
+  grid-area: footer;
+}
+
+.container .main-content {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: main;
+  background-color: blanchedalmond;
+}
+/*# sourceMappingURL=style.css.map */
